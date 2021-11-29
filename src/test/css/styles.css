@@ -51,6 +51,15 @@ a {
 	box-shadow: none;
 }
 
+/* CAROUSEL */
+.carousel-inner {
+    max-height: 600px;
+}
+
+img {
+    opacity: 0.5;
+}
+
 /* ICONS */
 /* WhatsApp API styles */
 .whatsapp-icon {
