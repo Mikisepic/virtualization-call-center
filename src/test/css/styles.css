@@ -1,99 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body{
+body {
 	margin: 0;
 	padding: 0;
 	background-color: #222531;
 }
-nav{
-	display: flex;
-	background-color: #11131a;
-	width: 100vw;
-	height: 60px;
-	align-items: center;
-	justify-content: space-between;
-	box-shadow: 0 1px 10px #111;
+
+/* TYPOGRAPHY */
+a {
+    font-family: 'Roboto', sans-serif;
 }
-#logo{
-	font-family: 'Roboto', sans-serif;
-	font-size: 28px;
+
+/* NAVBAR */
+
+.navbar {
+    background: #222531;
+}
+
+.navbar-brand {
+    font-size: 25px;
 	font-weight: 600;
 	color: #fee;
-	float: left;
-	width: 20vw;
-	margin-left: 50px;
-	text-decoration: none;
-	
 }
-#navbar{
-	width: 80vw;
-	list-style: none;
-	float: left;
-	margin-right: 50px;
-}
-.navItem{
-	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
+
+.nav-link {
+    color: #fee;
 	font-weight: 400;
 	text-transform: uppercase;
-	display: inline-block;
-	position: relative;
-	padding-left: 10px;
-}
-.navItem a{
-	color: #fee;
 	text-decoration: none;
 }
-.nav{
-	flex: 1;
-	text-align: right;
+
+.nav-item:hover {
+    cursor: pointer;
 }
 
-.navItem::after{
-	content: '';
-	width: 0%;
+.navbar-nav .nav-item::after {
+    content: '';
+	width: 200px;
 	height: 2px;
 	background: #f44336;
-	display: block;
-	margin: auto;
 	transition: 0.2s;
 }
-.navItem:hover::after{
-	width: 100%;
 
+.navbar-toggler {
+    border: none;
 }
 
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* ICONS */
 /* WhatsApp API styles */
-	/* for desktop */
-	.whatsapp_float {
-		position:fixed;
-		width:60px;
-		height:60px;
-		bottom:40px;
-		right:40px;
-		background-color:#25d366;
-		color:#FFF;
-		border-radius:50px;
-		text-align:center;
-			font-size:30px;
-		box-shadow: 2px 2px 3px #999;
-			z-index:100;
-	}
+.whatsapp-icon {
+    margin-top:16px;
+}
 
-	.whatsapp-icon {
-		margin-top:16px;
-	}
-	/* for mobile */
-	@media screen and (max-width: 767px){
-		.whatsapp-icon {
-		margin-top:10px;
-		}
-		.whatsapp_float {
-			width: 40px;
-			height: 40px;
-			bottom: 20px;
-			right: 10px;
-			font-size: 22px;
-		}
+/* DESKTOP */
+.whatsapp_float {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+        font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+        z-index:100;
+}
 
-	}
+/* MOBILE */
+@media screen and (max-width: 767px){
+    .whatsapp-icon {
+    margin-top:10px;
+    }
+    .whatsapp_float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 10px;
+        font-size: 22px;
+    }
+}
