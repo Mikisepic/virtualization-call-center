@@ -50,13 +50,13 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./images/img1.jpg" class="d-block w-100" alt="...">
+          <img src="./images/carousel-0.jpg" class="d-block w-100">
         </div>
         <div class="carousel-item">
-          <img src="./images/img2.jpg" class="d-block w-100" alt="...">
+          <img src="./images/carousel-1.jpg" class="d-block w-100">
         </div>
         <div class="carousel-item">
-          <img src="./images/img3.jpg" class="d-block w-100" alt="...">
+          <img src="./images/carousel-1.jpg" class="d-block w-100">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -78,77 +78,77 @@
     <div class="row">
       <div class="col-md-12 pt-5 pb-5">
         <h2 class="text-center text-white">APIE MADComms</h3>
-        <p class="text-center text-white fs-5 pt-2">Ši kompanija buvo įkurta 2021 metų rugsėjo 16 dieną. Motyvuota studentų grupė gavo užduotį iš nuostabaus dėstytojo sukurti telekomunikacijų svetainę. Pradžia buvo sunki... Buvo daug neaiškumų, retai kas sekėsi kaip planuota, bet laikui bėgant (2 svaitės iki pristatymo) ši svetainė pradėjo stotis ant kojų. Jo, ji dar nebaigta, bet mes esam Studentai. O Studentai yra labai gerai žinomi ir gerbiami, kadangi sugeba bet kokią užduotį padaryti paskutinę minutę. Dažnai ji būna atliekama ganėtinai prastai, nes ji būna daroma su mintimi "svarbu veikia". Tačiau mes ne eiliniai Studentai, mes... IT'yšnikai. Mes viską padarom ne tik paskutinę minutę, bet ir tvarkingai. Dėl to galime jus patikinti, jog net jei ir Jums atrodys kad Jūsų projektas yra nedaromas, nesijaudinkit, nes mes viską atidedame paskutinei minutei. :)
-        </p>
+          <p class="text-center text-white fs-5 pt-2">Ši kompanija buvo įkurta 2021 metų rugsėjo 16 dieną. Motyvuota studentų grupė gavo užduotį iš nuostabaus dėstytojo sukurti telekomunikacijų svetainę. Pradžia buvo sunki... Buvo daug neaiškumų, retai kas sekėsi kaip planuota, bet laikui bėgant (2 svaitės iki pristatymo) ši svetainė pradėjo stotis ant kojų. Jo, ji dar nebaigta, bet mes esam Studentai. O Studentai yra labai gerai žinomi ir gerbiami, kadangi sugeba bet kokią užduotį padaryti paskutinę minutę. Dažnai ji būna atliekama ganėtinai prastai, nes ji būna daroma su mintimi "svarbu veikia". Tačiau mes ne eiliniai Studentai, mes... IT'yšnikai. Mes viską padarom ne tik paskutinę minutę, bet ir tvarkingai. Dėl to galime jus patikinti, jog net jei ir Jums atrodys kad Jūsų projektas yra nedaromas, nesijaudinkit, nes mes viską atidedame paskutinei minutei. :)
+          </p>
       </div>
     </div>
   </div>
   <div class="advantages pb-5">
     <div class="container">
       <div class="row">
-      <h2 class="text-center pt-5 pb-5 mb-5">MŪSŲ IŠSKIRTINUMAI</h3>
-        <div class="col-md-12 col-lg-6 pt-5 pe-5">
-          <div class="row">
-            <div class="col-md-4 d-flex align-items-center justify-content-center">
-              <img src="images/linkedin-icon.png" alt="">
+        <h2 class="text-center pt-5 pb-5 mb-5">MŪSŲ IŠSKIRTINUMAI</h3>
+          <div class="col-md-12 col-lg-6 pt-5 pe-5">
+            <div class="row">
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img src="images/linkedin-icon.png" alt="">
+              </div>
+              <div class="col-md-8 text-start">
+                <h4>Aukšti standartai, apgalvoti procesai</h4>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+              </div>
             </div>
-            <div class="col-md-8 text-start">
-              <h4>Aukšti standartai, apgalvoti procesai</h4>
-              <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+            <div class="row pt-5">
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img src="images/linkedin-icon.png" alt="">
+              </div>
+              <div class="col-md-8 text-start">
+                <h4>Aukšti standartai, apgalvoti procesai</h4>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+              </div>
             </div>
-          </div>
-          <div class="row pt-5">
-            <div class="col-md-4 d-flex align-items-center justify-content-center">
-              <img src="images/linkedin-icon.png" alt="">
-            </div>
-            <div class="col-md-8 text-start">
-              <h4>Aukšti standartai, apgalvoti procesai</h4>
-              <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
-            </div>
-          </div>
-          <div class="row pt-5">
-            <div class="col-md-4 d-flex align-items-center justify-content-center">
-              <img src="images/linkedin-icon.png" alt="">
-            </div>
-            <div class="col-md-8 text-start">
-              <h4>Aukšti standartai, apgalvoti procesai</h4>
-              <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12 col-lg-6 pt-5 pe-5">
-          <div class="row">
-            <div class="col-md-4 d-flex align-items-center justify-content-center">
-              <img src="images/linkedin-icon.png" alt="">
-            </div>
-            <div class="col-md-8 text-start">
-              <h4>Aukšti standartai, apgalvoti procesai</h4>
-              <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+            <div class="row pt-5">
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img src="images/linkedin-icon.png" alt="">
+              </div>
+              <div class="col-md-8 text-start">
+                <h4>Aukšti standartai, apgalvoti procesai</h4>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+              </div>
             </div>
           </div>
-          <div class="row pt-5">
-            <div class="col-md-4 d-flex align-items-center justify-content-center">
-              <img src="images/linkedin-icon.png" alt="">
+          <div class="col-md-12 col-lg-6 pt-5 pe-5">
+            <div class="row">
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img src="images/linkedin-icon.png" alt="">
+              </div>
+              <div class="col-md-8 text-start">
+                <h4>Aukšti standartai, apgalvoti procesai</h4>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+              </div>
             </div>
-            <div class="col-md-8 text-start">
-              <h4>Aukšti standartai, apgalvoti procesai</h4>
-              <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+            <div class="row pt-5">
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img src="images/linkedin-icon.png" alt="">
+              </div>
+              <div class="col-md-8 text-start">
+                <h4>Aukšti standartai, apgalvoti procesai</h4>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+              </div>
             </div>
+            <div class="row pt-5">
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img src="images/linkedin-icon.png" alt="">
+              </div>
+              <div class="col-md-8 text-start">
+                <h4>Aukšti standartai, apgalvoti procesai</h4>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+              </div>
+            </div>
+
           </div>
-          <div class="row pt-5">
-            <div class="col-md-4 d-flex align-items-center justify-content-center">
-              <img src="images/linkedin-icon.png" alt="">
-            </div>
-            <div class="col-md-8 text-start">
-              <h4>Aukšti standartai, apgalvoti procesai</h4>
-              <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
-            </div>
-          </div>
-          
-        </div>
-        </div>
       </div>
     </div>
+  </div>
   </div>
 
   <div id="kontaktai" class="container">
