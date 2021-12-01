@@ -1,97 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body {
-	margin: 0;
-	padding: 0;
-	background-color: #222531;
-}
-
-/* TYPOGRAPHY */
-a {
-	font-family: "Roboto", sans-serif;
-}
-
-/* NAVBAR */
-
-.navbar {
+* body {
 	background: #222531;
-}
-
-.navbar-brand {
-	font-size: 25px;
-	font-weight: 600;
-	color: #fee;
-}
-
-.nav-link {
-	color: #fee;
-	font-weight: 400;
-	text-transform: uppercase;
-	text-decoration: none;
-}
-
-.nav-item:hover {
-	cursor: pointer;
-}
-
-.navbar-nav .nav-item::after {
-	content: "";
-	width: 200px;
-	height: 2px;
-	background: #f44336;
-	transition: 0.2s;
-}
-
-.navbar-toggler {
-	border: none;
-}
-
-.navbar-toggler:focus {
-	outline: none;
-	box-shadow: none;
-}
-
-/* CAROUSEL */
+  }
+  /* CAROUSEL */
 .carousel-inner {
     max-height: 600px;
 }
 
-img {
-    opacity: 0.5;
+.carousel-inner img {
+    opacity: 0.8;
+}
+#socials a img{
+	width: 3rem;
 }
 
-/* ICONS */
 /* WhatsApp API styles */
-.whatsapp-icon {
-	margin-top: 16px;
-}
-
-/* DESKTOP */
-.whatsapp_float {
-	position: fixed;
-	width: 60px;
-	height: 60px;
-	bottom: 40px;
-	right: 40px;
-	background-color: #25d366;
-	color: #fff;
-	border-radius: 50px;
-	text-align: center;
-	font-size: 30px;
-	box-shadow: 2px 2px 3px #999;
-	z-index: 100;
-}
-
-/* MOBILE */
-@media screen and (max-width: 767px) {
-	.whatsapp-icon {
-		margin-top: 10px;
-	}
+	/* for desktop */
 	.whatsapp_float {
-		width: 40px;
-		height: 40px;
-		bottom: 20px;
-		right: 10px;
-		font-size: 22px;
+		position:fixed;
+		width:60px;
+		height:60px;
+		bottom:40px;
+		right:40px;
+		background-color:#25d366;
+		color:#FFF;
+		border-radius:50px;
+		text-align:center;
+			font-size:30px;
+		box-shadow: 2px 2px 3px #999;
+			z-index:100;
 	}
-}
+
+	.whatsapp-icon {
+		margin-top:16px;
+	}
+	/* for mobile */
+	@media screen and (max-width: 767px){
+		.whatsapp-icon {
+		margin-top:10px;
+		}
+		.whatsapp_float {
+			width: 40px;
+			height: 40px;
+			bottom: 20px;
+			right: 10px;
+			font-size: 22px;
+		}
+
+	}
