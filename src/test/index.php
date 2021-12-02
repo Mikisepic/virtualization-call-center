@@ -70,15 +70,105 @@
     </div>
   </div>
 
-  <div id="sprendimai">
-  </div>
+  <!-- Tikrai dedam šitą?
+  <div id="sprendimai" class="container"></div> -->
+
   <div id="verslo-sritys">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 pt-5 pb-5">
+          <h2 class="text-center">VERSLO SRITYS</h3>
+            <p class="text-center pt-2">
+              Skirtingi verslai turi savo unikalius <strong>poreikius</strong> ir lūkesčius. Turime patirties, galimybių ir daug noro bei entuziazmo prisidėti prie Jūsų verslo <strong>didesnės sėkmės</strong>
+            </p>
+        </div>
+      </div>
+      <div class="row pt-5 mb-5">
+        <div class="col-sm-12 col-md-6 col-xl-3 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
+            <img src="images/shopping_cart_black_18dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center"><strong>El. parduotuvės</strong></h5>
+              <p class="card-text text-center">Didėjant klientų reiklumui, vis svarbiau užtikrinti efektyvią ir savalaikę komunikaciją.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-3 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
+            <img src="images/hotel_black_24dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center"><strong>Rezervacija</strong></h5>
+              <p class="card-text text-center">Esame įpratę internetu užsisakyti viešbutį ar lėktuvo bilietus ir tikėtis greitos pagalbos jei staiga jos prireiktų.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-3 mb-5 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
+            <img src="images/handshake_black_24dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center"><strong>Verslo paslaugos</strong></h5>
+              <p class="card-text text-center">Tikri profesionalai vertina kokybę, brangina laiką, todėl pasikliauja patikimais partneriais ir patiki jiems dalį netiesioginės savo veiklos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-3 mb-5 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
+            <img src="images/devices_black_24dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center"><strong>Telekomunikacijos</strong></h5>
+              <p class="card-text text-center">Modernizuojant infrastruktūrą, trumpinant laikotarpius ir atstumus ir iškyla poreikis palaikyti užsitikrinti glaudų ryšį su vartotojais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-sm-12 col-md-6 col-xl-3 mb-5 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
+            <img src="images/shopping_bag_black_24dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center"><strong>Mažmeninė prekyba</strong></h5>
+              <p class="card-text text-center">Mažmenine užsiimančių įmonių rinkoje yra ypač didelė konkurencija, todėl kiekvienas klientas ypač svarbus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-3 mb-5 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
+            <img src="images/screen_search_desktop_black_24dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center"><strong>IT</strong></h5>
+              <p class="card-text text-center">Pažangūs IT sprendimai padeda įmonėms didinti savo efektyvumą, bet ar visi Jūsų potencialūs klientai apie juos žino?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-3 mb-5 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
+            <img src="images/local_shipping_black_24dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center"><strong>Logistika</strong></h5>
+              <p class="card-text text-center">Rinkoms globalėjant, daugėja ir iššūkių logistikos procesų valdymui, o tai, savo ruožtu, brandina naujus klientų poreikius.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-3 mb-5 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
+            <img src="images/business_center_black_24dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center"><strong>Finansai, paskolos</strong></h5>
+              <p class="card-text text-center">Finansų srityje svarbiausia klientų pasitikėjimas, pastovumas ir galimybė klientams gauti atsakymus į savo klausimus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   </div>
   <div id="apie-mus" class="container">
     <div class="row">
       <div class="col-md-12 pt-5 pb-5">
         <h2 class="text-center text-white">APIE MADComms</h3>
-          <p class="text-center text-white fs-5 pt-2">Ši kompanija buvo įkurta 2021 metų rugsėjo 16 dieną. Motyvuota studentų grupė gavo užduotį iš nuostabaus dėstytojo sukurti telekomunikacijų svetainę. Pradžia buvo sunki... Buvo daug neaiškumų, retai kas sekėsi kaip planuota, bet laikui bėgant (2 svaitės iki pristatymo) ši svetainė pradėjo stotis ant kojų. Jo, ji dar nebaigta, bet mes esam Studentai. O Studentai yra labai gerai žinomi ir gerbiami, kadangi sugeba bet kokią užduotį padaryti paskutinę minutę. Dažnai ji būna atliekama ganėtinai prastai, nes ji būna daroma su mintimi "svarbu veikia". Tačiau mes ne eiliniai Studentai, mes... IT'yšnikai. Mes viską padarom ne tik paskutinę minutę, bet ir tvarkingai. Dėl to galime jus patikinti, jog net jei ir Jums atrodys kad Jūsų projektas yra nedaromas, nesijaudinkit, nes mes viską atidedame paskutinei minutei. :)
+          <p class="text-center text-white fs-5 pt-2">
+            Ši kompanija buvo įkurta 2021 metų rugsėjo 16 dieną. Motyvuota studentų grupė gavo užduotį iš nuostabaus dėstytojo sukurti telekomunikacijų svetainę. Pradžia buvo sunki... Buvo daug neaiškumų, retai kas sekėsi kaip planuota, bet laikui bėgant (2 svaitės iki pristatymo) ši svetainė pradėjo stotis ant kojų. Jo, ji dar nebaigta, bet mes esam Studentai. O Studentai yra labai gerai žinomi ir gerbiami, kadangi sugeba bet kokią užduotį padaryti paskutinę minutę. Dažnai ji būna atliekama ganėtinai prastai, nes ji būna daroma su mintimi "svarbu veikia". Tačiau mes ne eiliniai Studentai, mes... IT'yšnikai. Mes viską padarom ne tik paskutinę minutę, bet ir tvarkingai. Dėl to galime jus patikinti, jog net jei ir Jums atrodys kad Jūsų projektas yra nedaromas, nesijaudinkit, nes mes viską atidedame paskutinei minutei<span>&#128513;</span>
           </p>
       </div>
     </div>
@@ -144,7 +234,6 @@
                 <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
               </div>
             </div>
-
           </div>
       </div>
     </div>
