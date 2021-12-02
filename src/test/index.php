@@ -41,7 +41,7 @@
     </div>
   </nav>
 
-  <div id="paslaugos">
+  <div id="karusele">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -68,12 +68,15 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+  </div>
+
+  <div id="paslaugos">
     <div class="container">
       <div class="row">
         <div class="col-md-12 pt-5 pb-5">
           <h2 class="text-white text-center">PASLAUGOS</h3>
             <p class="text-white text-center pt-2">
-            Mums rūpi Jums padėti geriau, efektyviau dirbti ar sumažinti esamus veiklos kaštus</p>
+              Mums rūpi Jums padėti geriau, efektyviau dirbti ar sumažinti esamus veiklos kaštus</p>
         </div>
       </div>
       <div class="row pb-5 mb-5">
