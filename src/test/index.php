@@ -15,7 +15,7 @@
 <body>
   <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
     <div class="container">
-      <a class="navbar-brand">MADComms</a>
+      <a class="navbar-brand" href="index.php">MADComms</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,13 +25,13 @@
             <a class="nav-link" href="#paslaugos">Paslaugos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#sprendimai">Sprendimai</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#verslo-sritys">Verslo Sritys</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#apie-mus">Apie mus</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pagalba">Pagalba</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#kontaktai">Kontaktai</a>
@@ -68,10 +68,48 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 pt-5 pb-5">
+          <h2 class="text-white text-center">PASLAUGOS</h3>
+            <p class="text-white text-center pt-2">
+            Mums rūpi Jums padėti geriau, efektyviau dirbti ar sumažinti esamus veiklos kaštus</p>
+        </div>
+      </div>
+      <div class="row pb-5 mb-5">
+        <div class="col-md-12 col-lg-4 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem;">
+            <img src="images/stacked_line_chart_black_24dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Pardavimai</h5>
+              <p class="card-text text-center">Pardavimai yra kiekvieno verslo pagrindas. Mes padidinsime Jūsų pardavimus efektyviausiais metodais.</p>
+              <a href="#" class="btn btn-primary">Plačiau</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem;">
+            <img src="images/support_agent_black_24dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Klientų aptarnavimas</h5>
+              <p class="card-text text-center">Klientus aptarnaujame visais komunikacijos kanalais – telefonu, el. paštu, interneto pokalbiais.</p>
+              <a href="#" class="btn btn-primary">Plačiau</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4 d-flex justify-content-center">
+          <div class="card d-flex align-items-center justify-content-center" style="width: 18rem;">
+            <img src="images/poll_black_24dp.svg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">Klientų apklausos</h5>
+              <p class="card-text text-center">Mes nuolatos vygdome apklausas, kurių rezultatai padeda Jūsų įmonei klestėti.</p>
+              <a href="#" class="btn btn-primary">Plačiau</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <!-- Tikrai dedam šitą?
-  <div id="sprendimai" class="container"></div> -->
 
   <div id="verslo-sritys">
     <div class="container">
@@ -88,7 +126,7 @@
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
             <img src="images/shopping_cart_black_18dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center"><strong>El. parduotuvės</strong></h5>
+              <h5 class="card-title text-center">El. parduotuvės</h5>
               <p class="card-text text-center">Didėjant klientų reiklumui, vis svarbiau užtikrinti efektyvią ir savalaikę komunikaciją.</p>
             </div>
           </div>
@@ -97,7 +135,7 @@
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
             <img src="images/hotel_black_24dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center"><strong>Rezervacija</strong></h5>
+              <h5 class="card-title text-center">Rezervacija</h5>
               <p class="card-text text-center">Esame įpratę internetu užsisakyti viešbutį ar lėktuvo bilietus ir tikėtis greitos pagalbos jei staiga jos prireiktų.</p>
             </div>
           </div>
@@ -106,7 +144,7 @@
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
             <img src="images/handshake_black_24dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center"><strong>Verslo paslaugos</strong></h5>
+              <h5 class="card-title text-center">Verslo paslaugos</h5>
               <p class="card-text text-center">Tikri profesionalai vertina kokybę, brangina laiką, todėl pasikliauja patikimais partneriais ir patiki jiems dalį netiesioginės savo veiklos.</p>
             </div>
           </div>
@@ -115,7 +153,7 @@
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
             <img src="images/devices_black_24dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center"><strong>Telekomunikacijos</strong></h5>
+              <h5 class="card-title text-center">Telekomunikacijos</h5>
               <p class="card-text text-center">Modernizuojant infrastruktūrą, trumpinant laikotarpius ir atstumus ir iškyla poreikis palaikyti užsitikrinti glaudų ryšį su vartotojais.</p>
             </div>
           </div>
@@ -126,7 +164,7 @@
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
             <img src="images/shopping_bag_black_24dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center"><strong>Mažmeninė prekyba</strong></h5>
+              <h5 class="card-title text-center">Mažmeninė prekyba</h5>
               <p class="card-text text-center">Mažmenine užsiimančių įmonių rinkoje yra ypač didelė konkurencija, todėl kiekvienas klientas ypač svarbus.</p>
             </div>
           </div>
@@ -135,7 +173,7 @@
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
             <img src="images/screen_search_desktop_black_24dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center"><strong>IT</strong></h5>
+              <h5 class="card-title text-center">IT</h5>
               <p class="card-text text-center">Pažangūs IT sprendimai padeda įmonėms didinti savo efektyvumą, bet ar visi Jūsų potencialūs klientai apie juos žino?</p>
             </div>
           </div>
@@ -144,7 +182,7 @@
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
             <img src="images/local_shipping_black_24dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center"><strong>Logistika</strong></h5>
+              <h5 class="card-title text-center">Logistika</h5>
               <p class="card-text text-center">Rinkoms globalėjant, daugėja ir iššūkių logistikos procesų valdymui, o tai, savo ruožtu, brandina naujus klientų poreikius.</p>
             </div>
           </div>
@@ -153,7 +191,7 @@
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
             <img src="images/business_center_black_24dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title text-center"><strong>Finansai, paskolos</strong></h5>
+              <h5 class="card-title text-center">Finansai, paskolos</h5>
               <p class="card-text text-center">Finansų srityje svarbiausia klientų pasitikėjimas, pastovumas ir galimybė klientams gauti atsakymus į savo klausimus.</p>
             </div>
           </div>
@@ -165,7 +203,7 @@
   </div>
   <div id="apie-mus" class="container">
     <div class="row">
-      <div class="col-md-12 pt-5 pb-5">
+      <div class="col-md-12 pb-5">
         <h2 class="text-center text-white">APIE MADComms</h3>
           <p class="text-center text-white fs-5 pt-2">
             Ši kompanija buvo įkurta 2021 metų rugsėjo 16 dieną. Motyvuota studentų grupė gavo užduotį iš nuostabaus dėstytojo sukurti telekomunikacijų svetainę. Pradžia buvo sunki... Buvo daug neaiškumų, retai kas sekėsi kaip planuota, bet laikui bėgant (2 svaitės iki pristatymo) ši svetainė pradėjo stotis ant kojų. Jo, ji dar nebaigta, bet mes esam Studentai. O Studentai yra labai gerai žinomi ir gerbiami, kadangi sugeba bet kokią užduotį padaryti paskutinę minutę. Dažnai ji būna atliekama ganėtinai prastai, nes ji būna daroma su mintimi "svarbu veikia". Tačiau mes ne eiliniai Studentai, mes... IT'yšnikai. Mes viską padarom ne tik paskutinę minutę, bet ir tvarkingai. Dėl to galime jus patikinti, jog net jei ir Jums atrodys kad Jūsų projektas yra nedaromas, nesijaudinkit, nes mes viską atidedame paskutinei minutei<span>&#128513;</span>
@@ -239,6 +277,8 @@
     </div>
   </div>
   </div>
+
+  <div id="pagalba" class="container"></div> -->
 
   <div id="kontaktai" class="container">
     <div class="row">

@@ -17,14 +17,19 @@
 .advantages{
 	background-color: #61daff;
 }
-h1, h2, h3, h4{
+h1, h2, h3, h4, h5{
 	font-weight: bolder;
 }
 #verslo-sritys{
 	background-color: #61daff;
 }
-#verslo-sritys img{
+.card img{
 	width: 5rem;
+}
+
+.btn-primary{
+	background-color: #61daff;
+	border-color: #61daff;
 }
 
 /* WhatsApp API styles */
