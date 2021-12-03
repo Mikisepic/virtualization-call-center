@@ -32,8 +32,15 @@ h1, h2, h3, h4, h5{
 	border-color: #61daff;
 }
 
-/* WhatsApp API styles */
-	/* for desktop */
+#pagalba button img{
+	width: 8rem;
+}
+#pagalba .modal-body a img{
+	width: 3rem;
+}
+
+/* WhatsApp API styles 
+	/* for desktop
 	.whatsapp_float {
 		position:fixed;
 		width:60px;
@@ -52,7 +59,7 @@ h1, h2, h3, h4, h5{
 	.whatsapp-icon {
 		margin-top:16px;
 	}
-	/* for mobile */
+	/* for mobile
 	@media screen and (max-width: 767px){
 		.whatsapp-icon {
 		margin-top:10px;
@@ -65,4 +72,4 @@ h1, h2, h3, h4, h5{
 			font-size: 22px;
 		}
 
-	}
+	}*/

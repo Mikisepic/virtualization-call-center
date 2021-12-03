@@ -86,7 +86,6 @@
             <div class="card-body">
               <h5 class="card-title text-center">Pardavimai</h5>
               <p class="card-text text-center">Pardavimai yra kiekvieno verslo pagrindas. Mes padidinsime Jūsų pardavimus efektyviausiais metodais.</p>
-              <a href="#" class="btn btn-primary">Plačiau</a>
             </div>
           </div>
         </div>
@@ -96,7 +95,6 @@
             <div class="card-body">
               <h5 class="card-title text-center">Klientų aptarnavimas</h5>
               <p class="card-text text-center">Klientus aptarnaujame visais komunikacijos kanalais – telefonu, el. paštu, interneto pokalbiais.</p>
-              <a href="#" class="btn btn-primary">Plačiau</a>
             </div>
           </div>
         </div>
@@ -106,7 +104,6 @@
             <div class="card-body">
               <h5 class="card-title text-center">Klientų apklausos</h5>
               <p class="card-text text-center">Mes nuolatos vygdome apklausas, kurių rezultatai padeda Jūsų įmonei klestėti.</p>
-              <a href="#" class="btn btn-primary">Plačiau</a>
             </div>
           </div>
         </div>
@@ -281,7 +278,112 @@
   </div>
   </div>
 
-  <div id="pagalba" class="container"></div> -->
+  <div id="pagalba" class="container">
+    <div class="row pt-5 pb-5">
+      <div class="col-sm-12 text-center pt-5 pb-5">
+        <h1 class="text-white">PAGALBA</h1>
+        <p class="text-white pt-2">Kilo problema, kurią norite išspręsti kuo greičiau? Pasirinkite vieną iš mūsų aptarnaujamų įmonių ir gaukite Jums reikalingą pagalbą iškart!</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="images/VU-logotype.png" alt="">
+          </button>
+          <!-- Modal -->
+          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Pasirinkite susisiekimo būdą</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                  <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="images/IKI_logo.png" alt="">
+          </button>
+          <!-- Modal -->
+          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Pasirinkite susisiekimo būdą</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                  <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="images/Lidl-Emblem.png" alt="">
+          </button>
+          <!-- Modal -->
+          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Pasirinkite susisiekimo būdą</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                  <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="images/topocentras.png" alt="">
+          </button>
+          <!-- Modal -->
+          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Pasirinkite susisiekimo būdą</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                  <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div id="kontaktai" class="container">
     <div class="row">
@@ -321,8 +423,6 @@
       </div>
     </div>
   </div>
-
-  <a href="https://wa.me/8569541244" class="whatsapp_float" target="_blank"><i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
   <footer id="footer" class="bg-dark">
     <div class="container">
