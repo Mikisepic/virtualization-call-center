@@ -72,8 +72,8 @@
 
   <div id="paslaugos">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 pt-5 pb-5">
+      <div class="row pt-5 pb-5">
+        <div class="col-md-12">
           <h2 class="text-white text-center">PASLAUGOS</h3>
             <p class="text-white text-center pt-2">
               Mums rūpi Jums padėti geriau, efektyviau dirbti ar sumažinti esamus veiklos kaštus</p>
@@ -113,8 +113,8 @@
 
   <div id="verslo-sritys">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 pt-5 pb-5">
+      <div class="row pt-5 pb-5">
+        <div class="col-md-12">
           <h2 class="text-center">VERSLO SRITYS</h3>
             <p class="text-center pt-2">
               Skirtingi verslai turi savo unikalius <strong>poreikius</strong> ir lūkesčius. Turime patirties, galimybių ir daug noro bei entuziazmo prisidėti prie Jūsų verslo <strong>didesnės sėkmės</strong>
@@ -159,7 +159,7 @@
           </div>
         </div>
       </div>
-      <div class="row mb-5">
+      <div class="row">
         <div class="col-sm-12 col-md-6 col-xl-3 mb-5 d-flex justify-content-center">
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem; background-color: #61daff; border-color: #61daff">
             <img src="images/shopping_bag_black_24dp.svg" class="card-img-top" alt="...">
@@ -202,8 +202,8 @@
   </div>
   </div>
   <div id="apie-mus" class="container">
-    <div class="row">
-      <div class="col-md-12 pb-5">
+    <div class="row pt-5 pb-5">
+      <div class="col-md-12">
         <h2 class="text-center text-white">APIE MADComms</h3>
           <p class="text-center text-white fs-5 pt-2">
             Ši kompanija buvo įkurta 2021 metų rugsėjo 16 dieną. Motyvuota studentų grupė gavo užduotį iš nuostabaus dėstytojo sukurti telekomunikacijų svetainę. Pradžia buvo sunki... Buvo daug neaiškumų, retai kas sekėsi kaip planuota, bet laikui bėgant (2 svaitės iki pristatymo) ši svetainė pradėjo stotis ant kojų. Jo, ji dar nebaigta, bet mes esam Studentai. O Studentai yra labai gerai žinomi ir gerbiami, kadangi sugeba bet kokią užduotį padaryti paskutinę minutę. Dažnai ji būna atliekama ganėtinai prastai, nes ji būna daroma su mintimi "svarbu veikia". Tačiau mes ne eiliniai Studentai, mes... IT'yšnikai. Mes viską padarom ne tik paskutinę minutę, bet ir tvarkingai. Dėl to galime jus patikinti, jog net jei ir Jums atrodys kad Jūsų projektas yra nedaromas, nesijaudinkit, nes mes viską atidedame paskutinei minutei<span>&#128513;</span>
@@ -213,8 +213,8 @@
   </div>
   <div class="advantages pb-5">
     <div class="container">
-      <div class="row">
-        <h2 class="text-center pt-5 pb-5 mb-5">MŪSŲ IŠSKIRTINUMAI</h3>
+      <div class="row pt-5">
+        <h2 class="text-center pb-5">MŪSŲ IŠSKIRTINUMAI</h3>
           <div class="col-md-12 col-lg-6 pt-5 pe-5">
             <div class="row">
               <div class="col-md-4 d-flex align-items-center justify-content-center">
@@ -280,7 +280,7 @@
 
   <div id="pagalba" class="container">
     <div class="row pt-5 pb-5">
-      <div class="col-sm-12 text-center pt-5 pb-5">
+      <div class="col-sm-12 text-center pb-5">
         <h1 class="text-white">PAGALBA</h1>
         <p class="text-white pt-2">Kilo problema, kurią norite išspręsti kuo greičiau? Pasirinkite vieną iš mūsų aptarnaujamų įmonių ir gaukite Jums reikalingą pagalbą iškart!</p>
       </div>
@@ -300,10 +300,6 @@
                 </div>
                 <div class="modal-body d-flex justify-content-center">
                   <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
               </div>
             </div>
@@ -325,10 +321,6 @@
                 <div class="modal-body d-flex justify-content-center">
                   <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
               </div>
             </div>
           </div>
@@ -348,10 +340,6 @@
                 </div>
                 <div class="modal-body d-flex justify-content-center">
                   <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
               </div>
             </div>
@@ -373,10 +361,6 @@
                 <div class="modal-body d-flex justify-content-center">
                   <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
               </div>
             </div>
           </div>
@@ -386,8 +370,8 @@
   </div>
 
   <div id="kontaktai" class="container">
-    <div class="row">
-      <div class="col-sm-12 text-center pt-5 pb-5">
+    <div class="row  pt-5 pb-5">
+      <div class="col-sm-12 text-center pb-5">
         <h1 class="text-white">KONTAKTAI</h1>
         <p class="text-white pt-2">Džiaugsimės sulaukę Jūsų skambučio, el. laiško ar užpildytos kontaktų formos!</p>
       </div>
