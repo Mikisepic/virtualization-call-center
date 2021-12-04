@@ -47,16 +47,30 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./images/carousel-0.jpg" class="d-block w-100">
+          <!-- <div class="container">
+            <div class="karuseles-tekstas mt-5 pt-5 d-none d-md-block">
+              <h3 class="text-white d-flex align-items-start justify-content-start">Paslaugos</h3>
+              <p class="text-white d-flex align-items-start justify-content-start">Mes specializuojamės daugelyje sričių, todėl galime užtikrinti savo klientų pranašumą rinkoje</p>
+            </div>
+          </div> -->
+          <a href="#paslaugos"><img src="./images/carousel-0.jpg" class="d-block w-100"></a>
         </div>
         <div class="carousel-item">
-          <img src="./images/carousel-1.jpg" class="d-block w-100">
+          <a href="#verslo-sritys"><img src="./images/carousel-1.jpg" class="d-block w-100"></a>
         </div>
         <div class="carousel-item">
-          <img src="./images/carousel-1.jpg" class="d-block w-100">
+          <a href="#apie-mus"><img src="./images/carousel-2.jpg" class="d-block w-100"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="#pagalba"><img src="./images/carousel-3.jpg" class="d-block w-100"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="#kontaktai"><img src="./images/carousel-4.jpg" class="d-block w-100"></a>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -214,69 +228,91 @@
   <div class="advantages pb-5">
     <div class="container">
       <div class="row pt-5">
-        <h2 class="text-center pb-5">MŪSŲ IŠSKIRTINUMAI</h3>
+        <div classs="col-sm-12">
+          <h3 class="text-center pb-5">MŪSŲ IŠSKIRTINUMAI</h3>
+        </div>
+        <div class="row">
           <div class="col-md-12 col-lg-6 pt-5 pe-5">
             <div class="row">
               <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <img src="images/linkedin-icon.png" alt="">
+                <img class="" src="images/scandinavian-peninsula.jpg" alt="">
               </div>
               <div class="col-md-8 text-start">
-                <h4>Aukšti standartai, apgalvoti procesai</h4>
-                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
-              </div>
-            </div>
-            <div class="row pt-5">
-              <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <img src="images/linkedin-icon.png" alt="">
-              </div>
-              <div class="col-md-8 text-start">
-                <h4>Aukšti standartai, apgalvoti procesai</h4>
-                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
-              </div>
-            </div>
-            <div class="row pt-5">
-              <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <img src="images/linkedin-icon.png" alt="">
-              </div>
-              <div class="col-md-8 text-start">
-                <h4>Aukšti standartai, apgalvoti procesai</h4>
-                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+                <h4>Skandinaviškas požiūris į verslą</h4>
+                <p>Puoselėjame skandinaviškas vertybes - orientaciją į klientus, aukštą kokybę, darbuotojus, skaidrumą,
+                  patikimumą, igalaikę partnerystę</p>
               </div>
             </div>
           </div>
           <div class="col-md-12 col-lg-6 pt-5 pe-5">
             <div class="row">
               <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <img src="images/linkedin-icon.png" alt="">
+                <img src="images/certified.png" alt="">
               </div>
               <div class="col-md-8 text-start">
                 <h4>Aukšti standartai, apgalvoti procesai</h4>
-                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
-              </div>
-            </div>
-            <div class="row pt-5">
-              <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <img src="images/linkedin-icon.png" alt="">
-              </div>
-              <div class="col-md-8 text-start">
-                <h4>Aukšti standartai, apgalvoti procesai</h4>
-                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
-              </div>
-            </div>
-            <div class="row pt-5">
-              <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <img src="images/linkedin-icon.png" alt="">
-              </div>
-              <div class="col-md-8 text-start">
-                <h4>Aukšti standartai, apgalvoti procesai</h4>
-                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto savo klientams</p>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto
+                  savo klientams</p>
               </div>
             </div>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-lg-6 pt-5 pe-5">
+            <div class="row pt-5">
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img src="images/multi-language.png" alt="">
+              </div>
+              <div class="col-md-8 text-start">
+                <h4>Klientus aptarnaujame 5-iomis kalbomis.</h4>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto
+                  savo klientams</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6 pt-5 pe-5">
+            <div class="row pt-5">
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img src="images/computer-eng-salaries-worldwide_md.jpg" alt="">
+              </div>
+              <div class="col-md-8 text-start">
+                <h4>Modernios technologijos</h4>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto
+                  savo klientams</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-lg-6 pt-5 pe-5">
+            <div class="row pt-5">
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img src="images/happy-staff.jpg" alt="">
+              </div>
+              <div class="col-md-8 text-start">
+                <h4>Kompetetingas personalas</h4>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto
+                  savo klientams</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6 pt-5 pe-5">
+            <div class="row pt-5">
+              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img src="images/247-support.png" alt="">
+              </div>
+              <div class="col-md-8 text-start">
+                <h4>Aptarnavimas 24/7</h4>
+                <p>Paslaugas teikiame pagal aukštus kokybės, informacijos saugumo ir vadybos standartus, siekiame WOW efekto
+                  savo klientams</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  </div>
+
 
   <div id="pagalba" class="container">
     <div class="row pt-5 pb-5">

@@ -17,6 +17,15 @@
 .advantages{
 	background-color: #61daff;
 }
+.advantages img{
+	width: 8rem;
+	border-radius: 50%;
+	background-color: white;
+	border-style: solid;
+	border-width: 0.25rem;
+	border-color: white;
+	border-inline-color: white;
+}
 h1, h2, h3, h4, h5{
 	font-weight: bolder;
 }
