@@ -1,0 +1,34 @@
+---
+- hosts: webservers
+  become: yes
+
+  tasks:
+  - name: Update debian
+    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+  - name: Install Apache
+    apt: name=apache2 state=present
+
+  - name: Install MySQL
+    apt: name=mariadb-server state=present
+
+  - name: Install php mods
+    apt: name=libapache2-mod-php state=present
+
+  - name: Delete static files from www
+    file:
+      path: /var/www/html/index.html
+      state: absent
+
+  - name: Add hello world script
+    copy:
+      src: ~/web/index.php
+      dest: /var/www/html/index.php
+
+  - name: Change directory permissions
+    file:
+      path: /html
+      state: directory
+      group: www-data
+      recurse: yes
+      mode: g+rx
