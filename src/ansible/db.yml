@@ -1,0 +1,59 @@
+---
+- hosts: dbs
+  become: yes
+  vars:
+    ansible_become_pass: "{{ your_sudo_pass }}"
+    ansible_python_interpreter: "/usr/bin/python3" 
+  tasks:
+  - name: Update debian
+    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+  - name: Install Python3 Setup Tools
+    apt: name=python3-setuptools state=present
+  - name: Install pip3
+    apt: name=python3-pip state=present
+  - name: Install apt-transport-https Docker Dependency
+    apt: name=apt-transport-https state=present
+  - name: Install ca-certificates Docker Dependency
+    apt: name=ca-certificates state=present
+  - name: Install curl Docker Dependency
+    apt: name=curl state=present
+  - name: Install Docker Module for Python to run Docker
+    pip:
+      name: docker
+  - name: Install Docker Module for Python to Run Containers from Script
+    pip:
+      name: docker-compose
+  - name: Add Docker GPG apt Key
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+  - name: Add Docker Repository
+    apt_repository:
+      repo: deb https://download.docker.com/linux/ubuntu bionic stable
+      state: present
+
+  #update cache here again
+  - name: Show Output of Hello World Example
+    debug:
+      msg: "Container Output: {{hello_world_output.stdout}}"
+                    
+  - name: Check Container Status
+    command: docker ps
+    register: res
+  - debug: var=res.stdout
+  - name: Copy Needed Files from Ansible Machine Machine to Remote hosts
+    copy:
+      src:  /home/user/.ansible/db?/{{item}}
+      dest: /home/
+      with_items:
+        - docker-compose.yml 
+        - init.sql 
+  - name: Go to Directory Where Files Have Been Placed and Create PostgREST Docker DB Server and DB Containers
+    command: chdir=/home/ docker-compose up -d
+  - name: Clean Artifact Path
+    ansible.builtin.file:
+      path: /home/{{item}}
+      state: absent
+      with_items:
+        - docker-compose.yml
+        - init.sql
