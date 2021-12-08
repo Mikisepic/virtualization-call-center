@@ -1,7 +1,9 @@
 ---
 - hosts: webservers
   become: yes
-
+  vars:
+    ansible_become_pass: "{{ your_sudo_pass }}"
+    ansible_python_interpreter: "/usr/bin/python3" 
   tasks:
   - name: Update debian
     apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
