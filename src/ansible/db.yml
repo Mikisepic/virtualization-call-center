@@ -4,57 +4,61 @@
   vars:
     ansible_become_pass: "{{ your_sudo_pass }}"
     ansible_python_interpreter: "/usr/bin/python3"
-  vars_files:
-    - vars/default.yml
 
   tasks:
   - name: Update debian
     apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
 
-  - name: Install Python3 Setup Tools
-    apt: name=python3-setuptools state=present
-
-  - name: Install pip3
-    apt: name=python3-pip state=present
-
-  - name: Install apt-transport-https Docker Dependency
-    apt: name=apt-transport-https state=present
-
-  - name: Install ca-certificates Docker Dependency
-    apt: name=ca-certificates state=present
-
-  - name: Install curl Docker Dependency
-    apt: name=curl state=present
+  - name: Install required system packages
+    apt: name={{ item }} state=latest update_cache=yes
+    loop:
+      - 'python3-setuptools'
+      - 'python3-pip'
+      - 'apt-transport-https'
+      - 'ca-certificates'
+      - 'curl'
 
   - name: Add Docker GPG apt Key
     apt_key:
       url: https://download.docker.com/linux/ubuntu/gpg
       state: present
 
-  - name: Add Docker Repository
-    apt_repository:
-      repo: deb https://download.docker.com/linux/ubuntu bionic stable
-      state: present
-
   - name: Install Docker Module for Python to run Docker
     pip:
       name: docker
 
+  - name: Add docker official repository for Debian Buster
+    apt_repository:
+      repo: deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+      state: present
+
+  - name: Index new repo into the cache
+    become: yes
+    apt:
+      name: "*"
+      state: latest
+      update_cache: yes
+      force_apt_get: yes
+
+  - name: Actually install docker
+    apt:
+      name: "docker-ce"
+      state: latest
+
   - name: Ensure docker-compose is installed and available
     get_url:
-      url: https://github.com/docker/compose/releases/download/1.22.0/docker-compose-{{ ansible_system }>
+      url: https://github.com/docker/compose/releases/download/1.22.0/docker-compose-{{ ansible_system }}-{{ ansible_userspace_architecture }}
       dest: /usr/local/bin/docker-compose
       mode: 'u+x,g+x'
 
-  - name: Update debian
-    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+  - name: Test Docker with hello world example
+    shell: "docker run hello-world"
+    register: hello_world_output
 
-# doesnt work
   - name: Show Output of Hello World Example
     debug:
       msg: "Container Output: {{hello_world_output.stdout}}"
 
-# doesnt work      
   - name: Check Container Status
     command: docker ps
     register: res
@@ -68,14 +72,13 @@
       - docker-compose.yml
       - init.sql
 
-  - name: Go to Directory Where Files Have Been Placed and Create PostgREST Docker DB Server and DB Cont>
+  - name: Go to Directory Where Files Have Been Placed and Create PostgREST Docker DB Server and DB Containers
     command: chdir=/home/ docker-compose up -d
-
 
   - name: Clean Artifact Path
     ansible.builtin.file:
-      path: /root/projects/{{ item }}
+      path: "/root/projects/{{ item }}"
       state: absent
-      with_items:
-        - docker-compose.yml
-        - init.sql
+    with_items:
+      - docker-compose.yml
+      - init.sql
