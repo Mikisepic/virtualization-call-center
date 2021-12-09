@@ -8,26 +8,26 @@
   - name: Update debian
     apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
 
-  - name: Install Apache
+  - name: 1. Install Apache
     apt: name=apache2 state=present
 
-  - name: Install MySQL
+  - name: 2. Install MySQL
     apt: name=mariadb-server state=present
 
-  - name: Install php mods
+  - name: 3. Install php mods
     apt: name=libapache2-mod-php state=present
 
-  - name: Delete static files from www
+  - name: 4. Delete static files from www
     file:
       path: /var/www/html/index.html
       state: absent
 
-  - name: Add hello world script
+  - name: 5. Add hello world script
     copy:
       src: ~/web/index.php
       dest: /var/www/html/index.php
 
-  - name: Change directory permissions
+  - name: 6. Change directory permissions
     file:
       path: /html
       state: directory
