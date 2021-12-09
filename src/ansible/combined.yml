@@ -69,20 +69,9 @@
   - name: Update debian
     apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
 
-  - name: Install Python3 Setup Tools
-    apt: name=python3-setuptools state=present
-
-  - name: Install pip3
-    apt: name=python3-pip state=present
-
-  - name: Install apt-transport-https Docker Dependency
-    apt: name=apt-transport-https state=present
-
-  - name: Install ca-certificates Docker Dependency
-    apt: name=ca-certificates state=present
-
-  - name: Install curl Docker Dependency
-    apt: name=curl state=present
+  - name: Install required system packages
+    apt: name={{ item }} state=latest update_cache=yes
+    loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools']
 
   - name: Add Docker GPG apt Key
     apt_key:
@@ -128,7 +117,6 @@
 
   - name: Go to Directory Where Files Have Been Placed and Create PostgREST Docker DB Server and DB Cont>
     command: chdir=/home/ docker-compose up -d
-
 
   - name: Clean Artifact Path
     ansible.builtin.file:
