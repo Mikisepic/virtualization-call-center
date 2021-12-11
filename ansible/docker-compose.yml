@@ -1,9 +1,9 @@
 version: '3.7'
-services:
+services:  
   server:
     image: postgrest/postgrest
     ports:
-      - '8869:3000'
+      - '2911:3000'
     links:
       - db:db
     environment:
@@ -16,12 +16,10 @@ services:
   db:
     image: postgres
     ports:
-      - '7127:5432'
+      - '10325:5432'
     environment:
       POSTGRES_DB: app_db
       POSTGRES_USER: app_user
       POSTGRES_PASSWORD: password
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql #place where you need to put your init.sql in the docker container
-    # volumes:
-    #   - "./pgdata:/var/lib/postgresql/data"

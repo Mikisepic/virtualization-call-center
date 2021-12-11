@@ -15,6 +15,4 @@ CSSH_CON=$(cat $CVMID.txt | grep CONNECT\_INFO1| cut -d '=' -f 2 | tr -d '"'|sed
 CSSH_PRIP=$(cat $CVMID.txt | grep PRIVATE\_IP| cut -d '=' -f 2 | tr -d '"')
 echo "Connection string: $CSSH_CON"
 echo "Local IP: $CSSH_PRIP"
-#echo "Will delete VM $CVMID"
-#$(onevm delete $CVMID --user $CUSER --password $CPASS --endpoint $CENDPOINT )
 exit 0

@@ -8,14 +8,17 @@
   - name: Update debian
     apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
 
-  - name: Install Apache
-    apt: name=apache2 state=present
-
-  - name: Install MySQL
-    apt: name=mariadb-server state=present
-
-  - name: Install php mods
-    apt: name=libapache2-mod-php state=present
+  - name: Install required system packages
+    apt: name={{ item }} state=latest update_cache=yes
+    loop:
+      - 'apache2'
+      - 'python3-setuptools'
+      - 'python3-pip'
+      - 'postgresql'
+      - 'postgresql-contrib'
+      - 'libpq-dev'
+      - 'python3-psycopg2'
+      - 'libapache2-mod-php'
 
   - name: Delete static files from www
     file:
