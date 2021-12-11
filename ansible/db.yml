@@ -59,11 +59,6 @@
     debug:
       msg: "Container Output: {{hello_world_output.stdout}}"
 
-  - name: Check Container Status
-    command: docker ps
-    register: res
-  - debug: var=res.stdout
-
   - name: Copy Needed Files from Ansible Machine Machine to Remote hosts
     copy:
       src:  "/root/projects/{{ item }}"
@@ -73,7 +68,12 @@
       - init.sql
 
   - name: Go to Directory Where Files Have Been Placed and Create PostgREST Docker DB Server and DB Containers
-    command: chdir=/home/ docker-compose up -d
+    command: chdir=/home/ docker-compose up --build -d
+
+  - name: Check Container Status
+    command: docker ps
+    register: res
+  - debug: var=res.stdout
 
   - name: Clean Artifact Path
     ansible.builtin.file:

@@ -3,7 +3,7 @@ services:
   server:
     image: postgrest/postgrest
     ports:
-      - '2911:3000'
+      - '<generated_port>:3000'
     links:
       - db:db
     environment:
@@ -16,7 +16,7 @@ services:
   db:
     image: postgres
     ports:
-      - '10325:5432'
+      - '<generated_port>:5432'
     environment:
       POSTGRES_DB: app_db
       POSTGRES_USER: app_user

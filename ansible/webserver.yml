@@ -27,8 +27,8 @@
 
   - name: Copy the script
     copy:
-      src: /root/projects/web/index.php
-      dest: /var/www/html/index.php
+      src: /root/projects/web/ # /src/ in this repository
+      dest: /var/www/html/
 
   - name: Change directory permissions
     file:
