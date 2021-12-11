@@ -11,8 +11,8 @@ CVMREZ=$(onetemplate instantiate $OTHER_VMS_TEMPLATE_ID --name $DATABASE_VM_NAME
 CVMID=$(echo $CVMREZ |cut -d ' ' -f 3) 
 
 echo $CVMID
-echo "Waiting for VM to RUN 20 sec."
-sleep 20
+echo "Waiting for VM to RUN 30 sec."
+sleep 30
 
 $(onevm show $CVMID --user $CUSER --password $CPASS  --endpoint $CENDPOINT >$CVMID.txt)
 
