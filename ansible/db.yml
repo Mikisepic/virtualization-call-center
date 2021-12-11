@@ -51,14 +51,6 @@
       dest: /usr/local/bin/docker-compose
       mode: 'u+x,g+x'
 
-  - name: Test Docker with hello world example
-    shell: "docker run hello-world"
-    register: hello_world_output
-
-  - name: Show Output of Hello World Example
-    debug:
-      msg: "Container Output: {{hello_world_output.stdout}}"
-
   - name: Copy Needed Files from Ansible Machine Machine to Remote hosts
     copy:
       src:  "/root/projects/{{ item }}"
