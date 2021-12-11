@@ -1,3 +1,13 @@
+<?php
+$ip = "10.0.1.139";
+$port = "7127";
+$db_name = "app_db";
+$user = "app_user";
+$password = "password";
+$connStr = "host=$ip port=$port dbname=$db_name user=$user password=$password";
+//connection to data base
+$conn = pg_connect($connStr);
+?>
 <!doctype html>
 <html lang="en">
 
@@ -93,8 +103,8 @@
               Mums rūpi Jums padėti geriau, efektyviau dirbti ar sumažinti esamus veiklos kaštus</p>
         </div>
       </div>
-      <div class="row pb-5 mb-5">
-        <div class="col-md-12 col-lg-4 d-flex justify-content-center">
+      <div class="row mb-5">
+        <div class="col-md-12 col-lg-4 d-flex justify-content-center pb-5">
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem;">
             <img src="images/stacked_line_chart_black_24dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -103,7 +113,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-12 col-lg-4 d-flex justify-content-center">
+        <div class="col-md-12 col-lg-4 d-flex justify-content-center pb-5">
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem;">
             <img src="images/support_agent_black_24dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -112,7 +122,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-12 col-lg-4 d-flex justify-content-center">
+        <div class="col-md-12 col-lg-4 d-flex justify-content-center pb-5">
           <div class="card d-flex align-items-center justify-content-center" style="width: 18rem;">
             <img src="images/poll_black_24dp.svg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -313,7 +323,6 @@
     </div>
   </div>
 
-
   <div id="pagalba" class="container">
     <div class="row pt-5 pb-5">
       <div class="col-sm-12 text-center pb-5">
@@ -323,11 +332,11 @@
       <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center">
           <!-- Button trigger modal -->
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#vuPopUp">
             <img src="images/VU-logotype.png" alt="">
           </button>
           <!-- Modal -->
-          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade " id="vuPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
@@ -335,7 +344,17 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex justify-content-center">
-                  <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
+                  <?php
+                  //query
+                  $query = "select * from employees where salary=15000.00;";
+                  $result = pg_query($conn, $query);
+                  //stores result as rows
+                  $row = pg_fetch_assoc($result);
+                  //select wanted row
+                  $number = $row['fname'];
+                  $wappLink = "https://wa.me/$number";
+                  echo "<a href='$wappLink' target='_blank'><img src='images/whatsapp_black_24dp.svg' class='rounded' alt='...'></a>";
+                  ?>
                 </div>
               </div>
             </div>
@@ -343,11 +362,11 @@
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center">
           <!-- Button trigger modal -->
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#ikiPopUp">
             <img src="images/IKI_logo.png" alt="">
           </button>
           <!-- Modal -->
-          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade " id="ikiPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
@@ -355,7 +374,17 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex justify-content-center">
-                  <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
+                  <?php
+                  //query
+                  $query = "select * from employees where salary=15000.00;";
+                  $result = pg_query($conn, $query);
+                  //stores result as rows
+                  $row = pg_fetch_assoc($result);
+                  //select wanted row
+                  $number = $row['lname'];
+                  $wappLink = "https://wa.me/$number";
+                  echo "<a href='$wappLink' target='_blank'><img src='images/whatsapp_black_24dp.svg' class='rounded' alt='...'></a>";
+                  ?>
                 </div>
               </div>
             </div>
@@ -363,11 +392,11 @@
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center">
           <!-- Button trigger modal -->
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#lidlPopUp">
             <img src="images/Lidl-Emblem.png" alt="">
           </button>
           <!-- Modal -->
-          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade " id="lidlPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
@@ -375,7 +404,17 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex justify-content-center">
-                  <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
+                  <?php
+                  //query
+                  $query = "select * from employees where salary=15000.00;";
+                  $result = pg_query($conn, $query);
+                  //stores result as rows
+                  $row = pg_fetch_assoc($result);
+                  //select wanted row
+                  $number = $row['salary'];
+                  $wappLink = "https://wa.me/$number";
+                  echo "<a href='$wappLink' target='_blank'><img src='images/whatsapp_black_24dp.svg' class='rounded' alt='...'></a>";
+                  ?>
                 </div>
               </div>
             </div>
@@ -383,11 +422,11 @@
         </div>
         <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center">
           <!-- Button trigger modal -->
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#topoPopUp">
             <img src="images/topocentras.png" alt="">
           </button>
           <!-- Modal -->
-          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade " id="topoPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
@@ -395,7 +434,17 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex justify-content-center">
-                  <a href="https://wa.me/8569541244" target="_blank"><img src="images/whatsapp_black_24dp.svg" class="rounded" alt="..."></a>
+                  <?php
+                  //query
+                  $query = "select * from employees where salary=15000.00;";
+                  $result = pg_query($conn, $query);
+                  //stores result as rows
+                  $row = pg_fetch_assoc($result);
+                  //select wanted row
+                  $number = $row['ssn'];
+                  $wappLink = "https://wa.me/$number";
+                  echo "<a href='$wappLink' target='_blank'><img src='images/whatsapp_black_24dp.svg' class='rounded' alt='...'></a>";
+                  ?>
                 </div>
               </div>
             </div>
