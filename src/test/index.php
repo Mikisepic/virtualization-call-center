@@ -12,12 +12,12 @@ $conn = pg_connect($connStr);
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Our CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <title>MADComms</title>
 </head>
@@ -62,12 +62,6 @@ $conn = pg_connect($connStr);
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <!-- <div class="container">
-            <div class="karuseles-tekstas mt-5 pt-5 d-none d-md-block">
-              <h3 class="text-white d-flex align-items-start justify-content-start">Paslaugos</h3>
-              <p class="text-white d-flex align-items-start justify-content-start">Mes specializuojamės daugelyje sričių, todėl galime užtikrinti savo klientų pranašumą rinkoje</p>
-            </div>
-          </div> -->
           <a href="#paslaugos"><img src="./images/carousel-0.jpg" class="d-block w-100"></a>
         </div>
         <div class="carousel-item">
