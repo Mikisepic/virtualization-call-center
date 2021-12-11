@@ -33,7 +33,6 @@
       state: present
 
   - name: Index new repo into the cache
-    become: yes
     apt:
       name: "*"
       state: latest
