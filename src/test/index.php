@@ -1,6 +1,6 @@
 <?php
-$ip = "10.0.1.139";
-$port = "7127";
+$ip = "10.0.1.225";
+$port = "8531";
 $db_name = "app_db";
 $user = "app_user";
 $password = "password";
@@ -8,6 +8,25 @@ $connStr = "host=$ip port=$port dbname=$db_name user=$user password=$password";
 //connection to data base
 $conn = pg_connect($connStr);
 ?>
+
+<?php
+if (isset($_POST['submit'])) {
+  if (!empty($_POST['vardas']) && !empty($_POST['pastas']) && !empty($_POST['telefonas']) && !empty($_POST['zinute'])) {
+    $vardas = $_POST['vardas'];
+    $pastas = $_POST['pastas'];
+    $telefonas = $_POST['telefonas'];
+    $zinute = $_POST['zinute'];
+    $query = "INSERT INTO contactrequest(req_id, name, phone, email, message)
+                              VALUES(DEFAULT, '$vardas', '$telefonas', '$pastas', '$zinute')";
+    pg_query($conn, $query);
+  }
+}
+unset($vardas);
+unset($pastas);
+unset($telefonas);
+unset($zinute);
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -20,6 +39,21 @@ $conn = pg_connect($connStr);
   <!-- Our CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <title>MADComms</title>
+
+  <style> /*Hides number slider when inputing phone number in contact form*/
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -340,12 +374,12 @@ $conn = pg_connect($connStr);
                 <div class="modal-body d-flex justify-content-center">
                   <?php
                   //query
-                  $query = "select * from employees where salary=15000.00;";
+                  $query = "select * from company where com_id=1;";
                   $result = pg_query($conn, $query);
                   //stores result as rows
                   $row = pg_fetch_assoc($result);
                   //select wanted row
-                  $number = $row['fname'];
+                  $number = $row['phone'];
                   $wappLink = "https://wa.me/$number";
                   echo "<a href='$wappLink' target='_blank'><img src='images/whatsapp_black_24dp.svg' class='rounded' alt='...'></a>";
                   ?>
@@ -370,12 +404,12 @@ $conn = pg_connect($connStr);
                 <div class="modal-body d-flex justify-content-center">
                   <?php
                   //query
-                  $query = "select * from employees where salary=15000.00;";
+                  $query = "select * from company where com_id=2;";
                   $result = pg_query($conn, $query);
                   //stores result as rows
                   $row = pg_fetch_assoc($result);
                   //select wanted row
-                  $number = $row['lname'];
+                  $number = $row['phone'];
                   $wappLink = "https://wa.me/$number";
                   echo "<a href='$wappLink' target='_blank'><img src='images/whatsapp_black_24dp.svg' class='rounded' alt='...'></a>";
                   ?>
@@ -400,12 +434,12 @@ $conn = pg_connect($connStr);
                 <div class="modal-body d-flex justify-content-center">
                   <?php
                   //query
-                  $query = "select * from employees where salary=15000.00;";
+                  $query = "select * from company where com_id=3;";
                   $result = pg_query($conn, $query);
                   //stores result as rows
                   $row = pg_fetch_assoc($result);
                   //select wanted row
-                  $number = $row['salary'];
+                  $number = $row['phone'];
                   $wappLink = "https://wa.me/$number";
                   echo "<a href='$wappLink' target='_blank'><img src='images/whatsapp_black_24dp.svg' class='rounded' alt='...'></a>";
                   ?>
@@ -430,12 +464,12 @@ $conn = pg_connect($connStr);
                 <div class="modal-body d-flex justify-content-center">
                   <?php
                   //query
-                  $query = "select * from employees where salary=15000.00;";
+                  $query = "select * from company where com_id=4;";
                   $result = pg_query($conn, $query);
                   //stores result as rows
                   $row = pg_fetch_assoc($result);
                   //select wanted row
-                  $number = $row['ssn'];
+                  $number = $row['phone'];
                   $wappLink = "https://wa.me/$number";
                   echo "<a href='$wappLink' target='_blank'><img src='images/whatsapp_black_24dp.svg' class='rounded' alt='...'></a>";
                   ?>
@@ -457,20 +491,20 @@ $conn = pg_connect($connStr);
       <div class="col-sm-12 col-xl-6 pt-5 mt-2">
         <div class="contact-form">
           <h3 class="text-center text-white">Susisiekite su mumis!</h3>
-          <form class="pt-5">
+          <form class="pt-5" action="" method="post">
             <div class="mb-3">
-              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Vardas Pavardė">
+              <input type="text" class="form-control" name="vardas" id="vardas" maxlength="30" placeholder="Vardas Pavardė">
             </div>
             <div class="mb-3">
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="El. paštas">
+              <input type="email" class="form-control" name="pastas" id="pastas" maxlength="40" placeholder="El. paštas">
             </div>
             <div class="mb-3">
-              <input type="phone" class="form-control" id="exampleFormControlInput1" placeholder="Telefono numeris">
+              <input type="number" class="form-control" name="telefonas" id="telefonas" maxlength="15" placeholder="Telefono numeris">
             </div>
             <div class="mb-3">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Įveskite žinutę"></textarea>
+              <textarea class="form-control" name="zinute" id="zinute" maxlength="500" rows="3" placeholder="Įveskite žinutę"></textarea>
             </div>
-            <input class="btn btn-light" type="submit" value="Siųsti">
+            <input class="btn btn-light" name="submit" type="submit" value="Siųsti">
           </form>
         </div>
       </div>
