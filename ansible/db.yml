@@ -1,5 +1,5 @@
 ---
-- hosts: dbs
+- hosts: db
   become: yes
   vars:
     ansible_become_pass: "{{ your_sudo_pass }}"
@@ -15,6 +15,10 @@
       - 'python3-setuptools'
       - 'python3-pip'
       - 'apt-transport-https'
+      - 'postgresql'
+      - 'postgresql-contrib'
+      - 'libpq-dev'
+      - 'python3-psycopg2'
       - 'ca-certificates'
       - 'curl'
 
@@ -52,13 +56,13 @@
 
   - name: Copy Needed Files from Ansible Machine Machine to Remote hosts
     copy:
-      src:  "/root/projects/{{ item }}"
+      src:  "/root/{{ item }}"
       dest: /home/
     with_items:
-      - docker-compose.yml
-      - init.sql
+      - ansible/docker-compose.yml
+      - misc/init.sql
 
-  - name: Go to Directory Where Files Have Been Placed and Create PostgREST Docker DB Server and DB Containers
+  - name: Go to Targeted Directory and Create PostgREST Container
     command: chdir=/home/ docker-compose up --build -d
 
   - name: Check Container Status
@@ -66,7 +70,7 @@
     register: res
   - debug: var=res.stdout
 
-  - name: Go to Directory Where Files Have Been Placed and Create PostgREST Docker DB Server and DB Containers
+  - name: Create PostgreSQL DB Container
     command: chdir=/home/ docker-compose up --build -d
 
   - name: Clean Artifact Path

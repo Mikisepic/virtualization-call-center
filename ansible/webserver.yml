@@ -1,5 +1,5 @@
 ---
-- hosts: webservers
+- hosts: web
   become: yes
   vars:
     ansible_become_pass: "{{ your_sudo_pass }}"
@@ -25,9 +25,9 @@
       path: /var/www/html/index.html
       state: absent
 
-  - name: Copy the script
+  - name: Copy Web Files
     copy:
-      src: /root/projects/web/ # /src/ in this repository
+      src: /root/projects/src/
       dest: /var/www/html/
 
   - name: Change directory permissions
