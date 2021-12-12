@@ -66,6 +66,9 @@
     register: res
   - debug: var=res.stdout
 
+  - name: Go to Directory Where Files Have Been Placed and Create PostgREST Docker DB Server and DB Containers
+    command: chdir=/home/ docker-compose up --build -d
+
   - name: Clean Artifact Path
     ansible.builtin.file:
       path: "/root/projects/{{ item }}"
