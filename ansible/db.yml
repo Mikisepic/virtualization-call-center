@@ -75,8 +75,8 @@
 
   - name: Clean Artifact Path
     ansible.builtin.file:
-      path: "/root/projects/{{ item }}"
+      path: "/root/{{ item }}"
       state: absent
     with_items:
-      - docker-compose.yml
-      - init.sql
+      - ansible/docker-compose.yml
+      - misc/init.sql
