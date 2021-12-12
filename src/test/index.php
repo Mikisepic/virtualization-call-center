@@ -40,7 +40,8 @@ unset($zinute);
   <link rel="stylesheet" href="css/styles.css">
   <title>MADComms</title>
 
-  <style> /*Hides number slider when inputing phone number in contact form*/
+  <style>
+    /*Hides number slider when inputing phone number in contact form*/
     /* Chrome, Safari, Edge, Opera */
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -541,9 +542,9 @@ unset($zinute);
             Bendraukime
           </h4>
           <div id="socials" class="pt-5">
-            <a href="#" class="pe-1"><img src="images/fb-icon.png" alt=""></a>
-            <a href="#" class="pe-1"><img src="images/twitter-icon.png" alt=""></a>
-            <a href="#"><img src="images/linkedin-icon.png" alt=""></a>
+            <a href="https://www.facebook.com" target="_blank" class="pe-1"><img src="images/fb-icon.png" alt=""></a>
+            <a href="https://twitter.com" target="_blank" class="pe-1"><img src="images/twitter-icon.png" alt=""></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin-icon.png" alt=""></a>
           </div>
         </div>
       </div>
