@@ -27,7 +27,7 @@
 
   - name: Copy Web Files
     copy:
-      src: /root/src/
+      src: /root/web/
       dest: /var/www/html/
 
   - name: Change directory permissions
