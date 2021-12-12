@@ -1,0 +1,39 @@
+---
+- hosts: web
+  become: yes
+  vars:
+    ansible_become_pass: "{{ your_sudo_pass }}"
+    ansible_python_interpreter: "/usr/bin/python3" 
+  tasks:
+  - name: Update debian
+    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+  - name: Install required system packages
+    apt: name={{ item }} state=latest update_cache=yes
+    loop:
+      - 'apache2'
+      - 'python3-setuptools'
+      - 'python3-pip'
+      - 'postgresql'
+      - 'postgresql-contrib'
+      - 'libpq-dev'
+      - 'python3-psycopg2'
+      - 'libapache2-mod-php'
+
+  - name: Delete static files from www
+    file:
+      path: /var/www/html/index.html
+      state: absent
+
+  - name: Copy Web Files
+    copy:
+      src: /root/src/
+      dest: /var/www/html/
+
+  - name: Change directory permissions
+    file:
+      path: /html
+      state: directory
+      group: www-data
+      recurse: yes
+      mode: g+rx

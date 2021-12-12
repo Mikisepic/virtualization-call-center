@@ -1,0 +1,82 @@
+---
+- hosts: db
+  become: yes
+  vars:
+    ansible_become_pass: "{{ your_sudo_pass }}"
+    ansible_python_interpreter: "/usr/bin/python3"
+
+  tasks:
+  - name: Update debian
+    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+  - name: Install required system packages
+    apt: name={{ item }} state=latest update_cache=yes
+    loop:
+      - 'python3-setuptools'
+      - 'python3-pip'
+      - 'apt-transport-https'
+      - 'postgresql'
+      - 'postgresql-contrib'
+      - 'libpq-dev'
+      - 'python3-psycopg2'
+      - 'ca-certificates'
+      - 'curl'
+
+  - name: Add Docker GPG apt Key
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+
+  - name: Install Docker Module for Python to run Docker
+    pip:
+      name: docker
+
+  - name: Add docker official repository for Debian Buster
+    apt_repository:
+      repo: deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+      state: present
+
+  - name: Index new repo into the cache
+    apt:
+      name: "*"
+      state: latest
+      update_cache: yes
+      force_apt_get: yes
+
+  - name: Actually install docker
+    apt:
+      name: "docker-ce"
+      state: latest
+
+  - name: Ensure docker-compose is installed and available
+    get_url:
+      url: https://github.com/docker/compose/releases/download/1.22.0/docker-compose-{{ ansible_system }}-{{ ansible_userspace_architecture }}
+      dest: /usr/local/bin/docker-compose
+      mode: 'u+x,g+x'
+
+  - name: Copy Needed Files from Ansible Machine Machine to Remote hosts
+    copy:
+      src:  "/root/{{ item }}"
+      dest: /home/
+    with_items:
+      - ansible/docker-compose.yml
+      - misc/init.sql
+
+  - name: Go to Targeted Directory and Create PostgREST Container
+    command: chdir=/home/ docker-compose up --build -d
+
+  - name: Check Container Status
+    command: docker ps
+    register: res
+  - debug: var=res.stdout
+
+  - name: Create PostgreSQL DB Container
+    command: chdir=/home/ docker-compose up --build -d
+
+  - name: Clean Artifact Path
+    ansible.builtin.file:
+      path: "/root/{{ item }}"
+      state: absent
+    with_items:
+      - ansible/docker-compose.yml
+      - misc/init.sql
