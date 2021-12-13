@@ -3,11 +3,11 @@ CUSER=username
 CPASS=password
 CENDPOINT=https://grid5.mif.vu.lt/cloud3/RPC2
 
-ANSIBLE_VM_TEMPLATE_ID=template_id
+VM_TEMPLATE_STRING=template_string
+VM_NAME=name-vm
 
-ANSIBLE_VM_NAME=name-vm
 # sukuria VM'ą naudojant OpenNebula-tools paketą
-CVMREZ=$(onetemplate instantiate $OTHER_VMS_TEMPLATE_ID --name $DATABASE_VM_NAME  --user $CUSER --password $CPASS --endpoint $CENDPOINT)
+CVMREZ=$(onetemplate instantiate $VM_TEMPLATE_STRING --name $VM_NAME  --user $CUSER --password $CPASS --endpoint $CENDPOINT)
 CVMID=$(echo $CVMREZ |cut -d ' ' -f 3) 
 # palaukia 30s kol pasileis VM
 echo $CVMID
