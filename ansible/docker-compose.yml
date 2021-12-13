@@ -1,10 +1,10 @@
-version: '3.7'
-services:  
+version: '3.7' # nurodoma naudojama 'docker-compose' versija
+services:  # sąrašas kuriuos service norėsim paleist (veikia panašiu principu, kaip ansible yml "task:")
   server:
-    image: postgrest/postgrest
+    image: postgrest/postgrest # image pavadinimas, pagal kurį sukursim konteinerį
     ports:
-      - '{{ generated_port }}:3000'
-    links:
+      - '{{ generated_port }}:3000' # atidarytas (exposed) OpenNebula VM portas : local OpenNebula VM portas
+    links: # services kurie priklauso vienas nuo kito
       - db:db
     environment:
       PGRST_DB_URI: postgres://app_user:password@db:5432/app_db
@@ -21,6 +21,10 @@ services:
       POSTGRES_DB: app_db
       POSTGRES_USER: app_user
       POSTGRES_PASSWORD: password
-    volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-      - ./pgdata:/var/lib/postgresql/data
+    volumes:  # išsaugo nurodytuose failuose esančius duomenis konteineryje
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # nurodo kokio failo duomenis išsaugoti
+      - ./pgdata:/var/lib/postgresql/data #išsaugo duomenis
+
+# NOTES:
+  # depends_on - Express dependency between services.
+  # links - Link to containers in another service and also express dependency between services in the same way as depends_on.

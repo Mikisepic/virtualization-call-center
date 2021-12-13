@@ -6,16 +6,17 @@ CENDPOINT=https://grid5.mif.vu.lt/cloud3/RPC2
 ANSIBLE_VM_TEMPLATE_ID=template_id
 
 ANSIBLE_VM_NAME=name-vm
-
+# sukuria VM'ą naudojant OpenNebula-tools paketą
 CVMREZ=$(onetemplate instantiate $OTHER_VMS_TEMPLATE_ID --name $DATABASE_VM_NAME  --user $CUSER --password $CPASS --endpoint $CENDPOINT)
 CVMID=$(echo $CVMREZ |cut -d ' ' -f 3) 
-
+# palaukia 30s kol pasileis VM
 echo $CVMID
 echo "Waiting for VM to RUN 30 sec."
 sleep 30
 
+# surandą VM'ą pagal sukurto VM ID, ir surašo visus to VM duomenis į txt failą
 $(onevm show $CVMID --user $CUSER --password $CPASS  --endpoint $CENDPOINT >$CVMID.txt)
-
+# iš txt failo ištraukia prisijungimui reikiamus duomenis
 CSSH_CON=$(cat $CVMID.txt | grep CONNECT\_INFO1| cut -d '=' -f 2 | tr -d '"'|sed 's/'$CUSER'/root/')
 CSSH_PRIP=$(cat $CVMID.txt | grep PRIVATE\_IP| cut -d '=' -f 2 | tr -d '"')
 

@@ -7,7 +7,7 @@
   tasks:
   - name: Update debian
     apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
-
+  # įrašo nurodytus paketus (jų naujausias versijas)
   - name: Install required system packages
     apt: name={{ item }} state=latest update_cache=yes
     loop:
@@ -17,6 +17,7 @@
       - 'postgresql'
       - 'postgresql-contrib'
       - 'libpq-dev'
+      - 'php5-pgsql'
       - 'python3-psycopg2'
       - 'libapache2-mod-php'
 

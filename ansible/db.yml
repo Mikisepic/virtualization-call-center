@@ -8,7 +8,7 @@
   tasks:
   - name: Update debian
     apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
-
+  # įrašo nurodytus paketus (jų naujausias versijas)
   - name: Install required system packages
     apt: name={{ item }} state=latest update_cache=yes
     loop:
@@ -21,21 +21,21 @@
       - 'python3-psycopg2'
       - 'ca-certificates'
       - 'curl'
-
+  # pridedamas raktas, kuris leidžia įrašyt dockerio images
   - name: Add Docker GPG apt Key
     apt_key:
       url: https://download.docker.com/linux/ubuntu/gpg
       state: present
-
+  # tas pats kad 'pip install docker'
   - name: Install Docker Module for Python to run Docker
     pip:
       name: docker
-
+  # 'buster' versija yra skirta TIK Debian 10 versijai
   - name: Add docker official repository for Debian Buster
     apt_repository:
       repo: deb [arch=amd64] https://download.docker.com/linux/debian buster stable
       state: present
-
+  # Updatina visus package'us
   - name: Index new repo into the cache
     apt:
       name: "*"
@@ -61,7 +61,7 @@
     with_items:
       - ansible/docker-compose.yml
       - misc/init.sql
-
+  # nueinam į Database VM ir paleidžiam docker-compose.yaml playbooką (sukuriam postgres ir postgrest konteinerius)
   - name: Go to Targeted Directory and Create PostgREST Container
     command: chdir=/home/ docker-compose up --build -d
 
@@ -72,7 +72,7 @@
 
   - name: Create PostgreSQL DB Container
     command: chdir=/home/ docker-compose up --build -d
-
+  # po Database konteinerių setupo, pravalo cache (padaro docker-compose ir duombazės sukūrimo failus absent (unlinkina failus), nes jie nebereikalingi)
   - name: Clean Artifact Path
     ansible.builtin.file:
       path: "/root/{{ item }}"

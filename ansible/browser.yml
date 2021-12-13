@@ -1,18 +1,19 @@
 ---
 - hosts: client
-  become: yes
+  become: yes # parametras kuriame parašome ar norime paleisti scriptą kaip 'root' user
   vars:
-    ansible_become_pass: "{{ your_sudo_pass }}"
-    ansible_python_interpreter: "/usr/bin/python3" 
+    ansible_become_pass: "{{ your_sudo_pass }}" # root user password
+    ansible_python_interpreter: "/usr/bin/python3" # šitas pažymi, kad norėsim naudot būtent šitą python versiją (interpreter)
   tasks:
+  # same as 'apt update'
   - name: Update debian
     apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
-
+  # suinstaliuoja naujausią apt-transport-https package būtent šitai distribucijai
   - name: Install apt-transport-https
-    ansible.builtin.apt:
+    ansible.builtin.apt: # ansible.builtin.apt = apt install
       state: latest
       update_cache: true
-
+  # prieš pridedant repo, reikia pridėti repo key, tada jį pridedam į source list
   - name: Add Apt signing key
     ansible.builtin.apt_key:
       url: "https://dl.google.com/linux/linux_signing_key.pub"
@@ -23,7 +24,7 @@
       repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
       state: present
       filename: google-chrome
-      
+  # kai raktas yra pridėtas, package manager (apt) gali matyti šitą package ir jį atsiųsti/atnaujinti
   - name: Install google-chrome-stable
     ansible.builtin.apt:
       name: "google-chrome-stable"
